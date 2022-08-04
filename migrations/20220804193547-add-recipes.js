@@ -19,8 +19,9 @@ exports.up = function(db) {
   db.createTable('recipes', recipeSchema, () => console.log("Recipe Table Created"));
 };
 
+// Down command seems to not be working, will set note here for later resolve.
 exports.down = function(db) {
-  return null;
+  db.dropTable('recipes', () => console.log("Recipe Table Dropped"));
 };
 
 exports._meta = {

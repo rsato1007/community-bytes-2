@@ -1,3 +1,8 @@
+// Models index.js
+/*
+    This resource will be useful once we want to do pagination:
+    https://blog.logrocket.com/build-rest-api-node-express-mysql/
+*/
 const mysql = require('mysql2');
 
 const DB = mysql.createConnection({
@@ -11,4 +16,4 @@ const DB = mysql.createConnection({
 DB.connect((err) => {
     if (err) throw err;
     console.log("Connected!");
-})
+});

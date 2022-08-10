@@ -3,6 +3,9 @@
 var dbm;
 var type;
 var seed;
+/* IMPORT SCHEMAS */
+const userSchema = require('../server/models/User');
+const recipeSchema = require('../server/models/Recipe');
 
 /**
   * We receive the dbmigrate dependency from dbmigrate initially.
@@ -15,6 +18,16 @@ exports.setup = function(options, seedLink) {
 };
 
 exports.up = function(db) {
+  db.createTable('users', userSchema, (err) => {
+    if (err) throw err;
+    console.log("User Table Successfully Created");
+    return;
+  });
+  db.createTable('recipes', recipeSchema, (err) => {
+    if (err) throw err;
+    console.log("Recipe Table Successfully Created");
+    return;
+  });
   return null;
 };
 

@@ -2,6 +2,18 @@
 const recipeSchema = {
     id: { type: 'int', primaryKey: true },
     name: 'string',
+    user: {
+        type: 'int',
+        foreignKey: {
+            name: 'user_id_fk',
+            table: 'users',
+            rules: {
+              onDelete: 'CASCADE',
+              onUpdate: 'RESTRICT'
+            },
+            mapping: 'id'
+        }
+    },
     description: 'string',
     ingredient: 'string',
     image: 'string',
@@ -12,7 +24,6 @@ const recipeSchema = {
 
     // TODO:
     // reviews
-    // users
     // ingredients as another table
 }
 

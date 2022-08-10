@@ -1,6 +1,7 @@
 // Models Recipe.js
+// Documentation for creating tables: https://db-migrate.readthedocs.io/en/latest/API/SQL/#createtabletablename-columnspec-callback
 const recipeSchema = {
-    id: { type: 'int', primaryKey: true },
+    id: { type: 'int', primaryKey: true, notNUll: true, autoIncrement: true },
     name: 'string',
     user: {
         type: 'int',
@@ -14,7 +15,7 @@ const recipeSchema = {
             mapping: 'id'
         }
     },
-    
+
     description: 'string',
     ingredient: 'string',
     image: 'string',

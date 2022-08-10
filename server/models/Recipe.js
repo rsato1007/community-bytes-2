@@ -14,6 +14,7 @@ const recipeSchema = {
             mapping: 'id'
         }
     },
+    
     description: 'string',
     ingredient: 'string',
     image: 'string',
@@ -21,10 +22,6 @@ const recipeSchema = {
     serving: 'string',
     step: 'string',
     tip: 'string'
-
-    // TODO:
-    // reviews
-    // ingredients as another table
 }
 
 module.exports = recipeSchema;

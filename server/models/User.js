@@ -3,8 +3,6 @@ const userSchema = {
     id: { type: 'int', primaryKey: true },
     image: 'string',
     username: 'string',
-    // Reviews
-    // Recipes
     password: 'string',
     email: 'string',
     // Saved recipes

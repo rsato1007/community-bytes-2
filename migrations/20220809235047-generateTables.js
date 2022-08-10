@@ -23,6 +23,7 @@ exports.up = function(db) {
     console.log("User Table Successfully Created");
     return;
   });
+
   db.createTable('recipes', recipeSchema, (err) => {
     if (err) throw err;
     console.log("Recipe Table Successfully Created");
@@ -32,6 +33,17 @@ exports.up = function(db) {
 };
 
 exports.down = function(db) {
+  db.dropTable('users', (err) => {
+    if (err) throw err;
+    console.log("User Table Dropped Successfully");
+    return;
+  });
+
+  db.dropTable('recipes', (err) => {
+    if (err) throw err;
+    console.log("Recipe Table Dropped Successfully");
+    return;
+  });
   return null;
 };
 

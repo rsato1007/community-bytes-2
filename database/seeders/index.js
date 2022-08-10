@@ -5,6 +5,10 @@
 const path = require('path');
 require('dotenv').config({path: path.resolve(__dirname, '../../.env')});
 const mysql = require('mysql2');
+const users = require("./userSeeder");
+const tables = [
+    {name: 'users', columns: users.columns, rows: users.rows}
+]
 
 const DB = mysql.createConnection({
     host: 'localhost',
@@ -16,10 +20,12 @@ const DB = mysql.createConnection({
 
 DB.connect((err) => {
     if (err) throw err;
-    DB.query(`INSERT INTO users (image,username,password,email) VALUES('testing','testing','testing','testing')`, (err, results) => {
-        if (err) throw err;
-        console.log("Data inserted successfully");
-        return results;
+    tables.forEach((table) => {
+        DB.query(`INSERT INTO ${table.name}${table.columns} VALUES ?`, [table.rows], (err, results) => {
+            if (err) throw err;
+            console.log("Data inserted successfully");
+            return results;
+        });
     });
 
     DB.end();

@@ -32,18 +32,21 @@ exports.up = function(db) {
   return null;
 };
 
+// If a table uses a foreign key, make sure it's dropped before
+// dropping the other table. Order here does matter.
 exports.down = function(db) {
+  db.dropTable('recipes', (err) => {
+    if (err) throw err;
+    console.log("Recipe Table Dropped Successfully");
+    return;
+  });
+
   db.dropTable('users', (err) => {
     if (err) throw err;
     console.log("User Table Dropped Successfully");
     return;
   });
 
-  db.dropTable('recipes', (err) => {
-    if (err) throw err;
-    console.log("Recipe Table Dropped Successfully");
-    return;
-  });
   return null;
 };
 

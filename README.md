@@ -1,18 +1,18 @@
-# Community Bytes 2.0
-Community bytes was a project I created during my time in General Assembly's software immersive program. In the time since, I have deepened my knowledge of React and Express. So this project is meant to reflect my increased knowledge. Additionally, I am using this project to learn other things including SASS, Docker, AWS, Unit/Integration Testing, and SQL-based database. Additionally, this application will be my journey into building highly secure applications.
+# Community Bytes Revamped
+Community Bytes is a website for users to create, find, and review recipes.
 
-# What is community bytes?
-Community bytes is a web-based application for finding, creating, and reviewing recipes.
-
-# Technologies Incorporated
-## Frontend Technologies
+# Technology
+## Frontend
 - React
-- Sass
-- JavaScript | CSS | HTML
-## Backend Technologies
+- CSS | HTML
+- Material UI
+
+## Backend
 - Express.js
 - Node.js
-- Database: TBD
-## Misc Technologies
-- AWS (Specific services will be added later as they are implemented)
-- Jest
+- MySQL
+
+## Additional
+- Jest | Testing Library
+- TypeScript
+- Webpack

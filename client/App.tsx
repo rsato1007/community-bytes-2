@@ -1,7 +1,13 @@
+/* IMPORT EXTERNAL MODULES */
 import React from "react";
 
+/* IMPORT INTERNAL MODULES */
+import ClientRouter from "./Components/ClientRouter";
+
 const App = (): JSX.Element => {
-  return <h1>TypeScript is awesome</h1>;
+  return (
+    <ClientRouter />
+  );
 };
 
 export default App;

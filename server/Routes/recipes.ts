@@ -11,15 +11,12 @@ recipeRouter.route(["/", "/:id"])
     .all((req: Request, res: Response, next: NextFunction) => {
         next();
     })
+    /* 
+        Most of this will be altered, but for now, we'll use it as a template.
+    */
     .get(recipeController.list)
-    .put((req: Request, res: Response, next: NextFunction) => {
-        return;
-    })
-    .post((req: Request, res: Response, next: NextFunction) => {
-        return;
-    })
-    .delete((req: Request, res: Response, next: NextFunction) => {
-        return;
-    })
+    .put(recipeController.update)
+    .post(recipeController.create)
+    .delete(recipeController.delete)
 
 export default recipeRouter;

@@ -8,6 +8,7 @@ dotenv.config({path: path.resolve(__dirname, '../.env')});
 
 /* IMPORT INTERNAL MODULES */
 import "./Configs/db.config";
+import router from "./Routes";
 
 /* CONFIGURATION */
 const PORT = 3000;
@@ -18,6 +19,7 @@ const app = express();
 /* MIDDLEWARE */
 
 /* ROUTES */
+app.use("/api", router);
 
 /* REACT.JS CONNECTION */
 app.use(express.static(path.join(__dirname, "../public")));

@@ -28,6 +28,9 @@ import { stepSchema } from "./Step";
 import { tipSchema } from "./Tip";
 import { userSchema } from "./User";
 
+/**
+ * Acts as central hub for all database models.
+ */
 export const dataSchema = {
     ingredient: ingredientSchema,
     recipe: recipeSchema,

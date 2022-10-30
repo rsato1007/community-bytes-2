@@ -16,7 +16,7 @@ const DB: mysql.Connection = mysql.createConnection({
     port: 3306
 });
 
-// Connects to database
+// Database Connection
 DB.connect((err): void => {
     if (err) throw err;
     console.log("Database Connection Successful");

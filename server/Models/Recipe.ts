@@ -1,5 +1,7 @@
 /* MODELS: Recipe.ts */
-
+/**
+ * Column structure for recipe table.
+ */
 export const recipeSchema = {
     id: { type: 'int', primaryKey: true, notNUll: true, autoIncrement: true },
     name: { type: 'text', notNULL: true },

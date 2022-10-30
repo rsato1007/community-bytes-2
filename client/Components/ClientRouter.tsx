@@ -17,14 +17,20 @@ interface IParentPropComp {
     childComp?: React.ReactNode
 }
 
-// Might want to revist how children can be redone for client router.
+/**
+ * React component that handles client side routing. 
+ * Allows for better seperation of concerns.
+ * 
+ * @param children  
+ * @returns 
+ */
 const ClientRouter = ({children}: any): JSX.Element => {
     return (
         <>
             <NavBar />
             <Routes>
                 {/* TODO:
-                    -Determine what routes we need
+                    - Determine what routes we need
                 */}
                 <Route 
                     path="about" 
